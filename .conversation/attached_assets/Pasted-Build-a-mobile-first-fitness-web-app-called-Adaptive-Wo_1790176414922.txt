@@ -1,0 +1,337 @@
+Build a mobile-first fitness web app called "Adaptive Workout Coach".
+
+IMPORTANT:
+This is the first functional prototype of a real startup product, not a generic fitness landing page.
+
+PRODUCT IDEA:
+The app helps ordinary beginners and intermediate users know exactly what workout to do today without having to understand workout programming.
+
+Core promise:
+"Tell us your goal, time and equipment. We'll tell you what to do today — then adapt your next workout based on what you actually did."
+
+Core product loop:
+PLAN → TRAIN → RECORD → ADAPT → REPEAT
+
+TARGET USERS:
+Adults roughly 18–40 who want to build muscle, get stronger, lose fat while maintaining/building muscle, or improve general fitness.
+
+They don't want to become fitness experts. They want simple instructions and progressive workouts.
+
+DESIGN DIRECTION:
+Create a premium, modern, minimal fitness product.
+
+The design should feel:
+
+- focused
+- energetic
+- calm
+- trustworthy
+- premium
+- simple
+
+Avoid:
+
+- bodybuilding-bro aesthetics
+- neon colors
+- excessive gradients
+- generic AI-dashboard appearance
+- clutter
+- unnecessary charts
+- excessive cards
+
+Think Apple Fitness + modern productivity software + serious training tool.
+
+Use:
+
+- large typography
+- generous whitespace
+- strong visual hierarchy
+- large touch-friendly buttons
+- rounded but restrained components
+- subtle animations
+- excellent mobile layout
+- responsive desktop layout
+- dark mode support
+
+PRIMARY UX PRINCIPLE:
+"You don't have to think."
+
+The user should understand what to do next within approximately 3 seconds.
+
+FIRST PROTOTYPE:
+Build the following complete flow:
+
+SCREEN 1 — WELCOME
+
+Headline:
+"Train smarter."
+
+Subheading:
+"Your workout plan adapts to you — your progress, your time, and the equipment you actually have."
+
+Primary button:
+"Start my plan"
+
+Small supporting text:
+"No complicated programming. Just train."
+
+When the user presses the button, move to Screen 2.
+
+SCREEN 2 — GOAL
+
+Headline:
+"What are you working toward?"
+
+Selectable options:
+
+1. Build muscle
+2. Get stronger
+3. Lose fat + build muscle
+4. General fitness
+
+Only one option can be selected.
+
+Show a clear selected state.
+
+Continue button:
+"Continue"
+
+Do not allow Continue until an option is selected.
+
+SCREEN 3 — EXPERIENCE
+
+Headline:
+"How much training experience do you have?"
+
+Options:
+
+- New to training
+- 6 months – 2 years
+- 2+ years
+
+Continue button.
+
+SCREEN 4 — EQUIPMENT
+
+Headline:
+"Where do you train?"
+
+Options:
+
+- Full gym
+- Home gym
+- Dumbbells
+- Bodyweight
+- Mix of equipment
+
+Allow one selection for this prototype.
+
+Continue button.
+
+SCREEN 5 — WORKOUT TIME
+
+Headline:
+"How much time do you usually have?"
+
+Options:
+
+- 20 minutes
+- 30 minutes
+- 45 minutes
+- 60 minutes
+- 90+ minutes
+
+Continue button.
+
+SCREEN 6 — TRAINING FREQUENCY
+
+Headline:
+"How often can you train?"
+
+Options:
+
+- 2 days/week
+- 3 days/week
+- 4 days/week
+- 5 days/week
+- 6+ days/week
+
+Continue button.
+
+SCREEN 7 — PLAN READY
+
+Display a polished summary based on the user's selections.
+
+Example:
+
+"Your plan is ready."
+
+Goal:
+Build muscle
+
+Experience:
+New to training
+
+Equipment:
+Full gym
+
+Workout:
+45 minutes
+
+Frequency:
+4 days/week
+
+Then show:
+
+"Your plan will adapt as you train."
+
+Primary button:
+"Start today's workout"
+
+For this prototype, pressing the button should take the user to the Today screen.
+
+SCREEN 8 — TODAY
+
+Headline:
+"Today's workout"
+
+Show:
+
+Upper Body
+Approximately 43 minutes
+
+Then list example exercises:
+
+Bench Press
+3 × 8–12
+
+Lat Pulldown
+3 × 8–12
+
+Seated Cable Row
+3 × 8–12
+
+Shoulder Press
+3 × 8–12
+
+Lateral Raise
+3 × 12–15
+
+Biceps Curl
+2 × 10–15
+
+Primary button:
+"Start workout"
+
+Also provide smaller actions:
+
+"I'm short on time"
+"Equipment unavailable"
+
+These don't need full functionality yet, but they should look interactive.
+
+NAVIGATION:
+
+Once the user reaches Today, show a bottom navigation bar:
+
+Today
+Progress
+History
+Profile
+
+Only Today needs meaningful content in this first prototype.
+
+PROTOTYPE FUNCTIONALITY:
+
+Implement real client-side state.
+
+The user's onboarding selections must persist while navigating between screens.
+
+The app should not simply be a collection of static screens.
+
+Implement:
+
+- next/back navigation
+- selection state
+- validation
+- onboarding progress indicator
+- generated plan summary based on selections
+- Today screen generated from the selections
+
+Do NOT add authentication yet.
+
+Do NOT add a database yet.
+
+Do NOT add payments yet.
+
+Do NOT add AI APIs yet.
+
+Do NOT add Supabase yet.
+
+Do NOT add nutrition/calorie tracking.
+
+Do NOT add social features.
+
+Do NOT add chat.
+
+Do NOT add wearable integration.
+
+Do NOT add exercise videos.
+
+Do NOT create an enormous exercise database.
+
+TECHNICAL REQUIREMENTS:
+
+Use a clean modern React + TypeScript architecture suitable for later expansion into a production application.
+
+Keep business logic separated from UI.
+
+Create reusable components for:
+
+- buttons
+- selection cards
+- progress indicator
+- screen layout
+- exercise rows
+- bottom navigation
+
+Create clean data structures for:
+
+- user onboarding profile
+- goals
+- experience levels
+- equipment
+- workout duration
+- training frequency
+- exercises
+- workout templates
+
+Make the architecture easy to connect to Supabase later.
+
+MOBILE-FIRST:
+The primary device is an Android phone.
+
+Make every screen comfortable to use with one hand.
+
+Use large touch targets.
+
+Avoid tiny text and tiny buttons.
+
+Ensure content works on smaller phone screens without horizontal scrolling.
+
+ACCESSIBILITY:
+Use readable contrast.
+Use semantic labels where applicable.
+Do not rely only on color to communicate selection.
+
+ERROR HANDLING:
+If something goes wrong, show a friendly inline message rather than a blank screen.
+
+IMPORTANT DEVELOPMENT RULE:
+Do not over-engineer this prototype.
+
+First make the complete onboarding → plan → Today experience work correctly.
+
+After implementation, test the entire flow yourself and fix obvious UI or navigation problems.
+
+The result should feel like the beginning of a real consumer fitness product, not a coding demo.

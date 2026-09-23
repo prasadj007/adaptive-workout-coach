@@ -1,6 +1,6 @@
-# [Project name]
+# Adaptive Workout Coach
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A mobile-first fitness web app that turns a user's goal, experience, equipment, time, and schedule into a clear workout for today.
 
 ## Run & Operate
 
@@ -22,23 +22,29 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/adaptive-workout-coach/src/App.tsx` — onboarding state, plan generation, Today workout, and navigation.
+- `artifacts/adaptive-workout-coach/src/index.css` — shared theme tokens, typography, responsive layout, and motion utilities.
+- `artifacts/adaptive-workout-coach/package.json` — Vite app scripts and frontend dependencies.
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The first prototype is client-side only; onboarding state persists in localStorage so the flow works without authentication or a database.
+- Workout content is represented with typed local data structures so the later plan engine can replace the prototype logic without changing the UI contract.
+- The app uses one responsive shell: bottom navigation on mobile and a persistent sidebar on larger screens.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Guided five-step onboarding for goal, experience, equipment, workout duration, and training frequency.
+- Derived plan summary and Today workout with adaptive metadata and actionable session controls.
+- Client-side exercise completion, session start/finish, short-session and equipment-swap actions, and supporting Progress, History, and Profile views.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Keep the experience simple, premium, mobile-first, and focused on the next action.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The app is intentionally not connected to auth, a database, AI, payments, nutrition, social, chat, wearables, or video content yet.
 
 ## Pointers
 

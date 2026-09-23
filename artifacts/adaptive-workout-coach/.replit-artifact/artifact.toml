@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Adaptive Workout Coach"
+description = "A mobile-first fitness web app that guides beginners and intermediate users through a personalized workout onboarding flow, generates a plan, and serves a clear Today workout."
+version = "1.0.0"
+id = "artifacts/adaptive-workout-coach"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19973
+
+[services.development]
+run = "pnpm --filter @workspace/adaptive-workout-coach run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/adaptive-workout-coach", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/adaptive-workout-coach/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19973"
+BASE_PATH = "/"
